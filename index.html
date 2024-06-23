@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF417 Barcode Scanner</title>
+    <style>
+        .styled-button {
+            background-color: #4CAF50; /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Add some padding */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the button inline-block */
+            font-size: 16px; /* Increase font size */
+            margin: 10px 2px; /* Add some margin */
+            cursor: pointer; /* Add a pointer on hover */
+            border-radius: 12px; /* Rounded corners */
+            transition: background-color 0.3s; /* Add transition for hover effect */
+        }
+
+        .styled-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        @media (max-width: 390px) {
+            .video-canvas {
+                width: 360px;
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h1>Scanner</h1>
+        <video id="video" width="600" height="400" style="border: 1px solid black; border-radius: 20px;" class="video-canvas"></video>
+        <button id="startButton" class="styled-button">Start Scanning</button>
+        <p id="result"></p>
+    </div>
+    <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
+    <script src="scanner.js"></script>
+</body>
+</html>
